@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Galeria de Imagens de animais</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #modal img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Animais</h1>
+  </header>
+  <main>
+    <figure>
+      <img src="image1.jpg" alt="Cobra verde" onclick="openModal(this)">
+      <figcaption>Bela cobra verde</figcaption>
+    </figure>
+    <figure>
+      <img src="image2.jpg" alt="Cobra vermelha" onclick="openModal(this)">
+      <figcaption>Bela cobra vermelha</figcaption>
+    </figure>
+    <figure>
+      <img src="image3.jpg" alt="Crocodilo" onclick="openModal(this)">
+      <figcaption>Crocodilo selvagem com a boca aberta</figcaption>
+    </figure>
+    <figure>
+      <img src="image4.jpg" alt="Águia" onclick="openModal(this)">
+      <figcaption>Águia olhando fixamente</figcaption>
+    </figure>
+    <figure>
+      <img src="image5.jpg" alt="Esquilo" onclick="openModal(this)">
+      <figcaption>Esquilo bonitinho</figcaption>
+    </figure>
+    <figure>
+      <img src="image6.jpg" alt="Gato" onclick="openModal(this)">
+      <figcaption>Gato numa árvore</figcaption>
+    </figure>
+    <figure>
+      <img src="image7.jpg" alt="Rinoceronte" onclick="openModal(this)">
+      <figcaption>Rinoceronte selvagem</figcaption>
+    </figure>
+    <figure>
+      <img src="image8.jpg" alt="Tartaruga" onclick="openModal(this)">
+      <figcaption>Tartaruga marinha</figcaption>
+    </figure>
+    <figure>
+      <img src="image9.jpg" alt="Tigre" onclick="openModal(this)">
+      <figcaption>Tigre na neve</figcaption>
+    </figure>
+    <figure>
+      <img src="image10.jpg" alt="Tucano" onclick="openModal(this)">
+      <figcaption>Um belo Tucano</figcaption>
+    </figure>
+    <figure>
+      <img src="image11.jpg" alt="Ursos" onclick="openModal(this)">
+      <figcaption>Ursos selvagens lutando</figcaption>
+    </figure>
+    <figure>
+      <img src="image12.jpg" alt="Zebras" onclick="openModal(this)">
+      <figcaption>Duas Zebras bebendo água</figcaption>
+    </figure>
+  </main>
+  
+  <dialog id="modal">
+      <img id="modalImage" src="" alt="">
+      <figcaption id="modalCaption"></figcaption>
+      <button onclick="modal.close()">Fechar</button>
+  </dialog>
+  
+  <footer>
+    <p>Imagens tiradas do site 
+    <a href="https://www.pexels.com/pt-br/" target="_blank" rel="noopener noreferrer">Pexels</a>
+    </p>
+  </footer>
+
+  <script>
+    function openModal(imageElement) {
+      const modal = document.getElementById('modal');
+      const modalImage = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      
+      modalImage.src = imageElement.src;
+      modalCaption.textContent = imageElement.alt;
+      modal.showModal();
+    }
+  </script>
+</body>
+</html>
